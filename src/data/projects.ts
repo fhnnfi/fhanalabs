@@ -29,8 +29,8 @@ export const projects: Project[] = [
     name: "Ngomongin",
     description:
       "Indonesian Culture Translator — translate text into regional styles like Indonesia Gen Z.",
-    url: "", // TODO: replace with deployed URL when available
-    status: "development",
+    url: "https://ngomongin.fhanalabs.site", // TODO: replace with deployed URL when available
+    status: "live",
     tags: ["AI", "Translator"],
   },
 ];
