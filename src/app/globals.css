@@ -1,15 +1,51 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 
-  --color-canvas: #050505;
-  --color-ink: #f5f5f3;
-  --color-muted: #8a8a86;
-  --color-faint: #5c5c58;
-  --color-line: rgba(245, 245, 243, 0.12);
-  --color-line-strong: rgba(245, 245, 243, 0.28);
+  --color-canvas: var(--c-canvas);
+  --color-ink: var(--c-ink);
+  --color-muted: var(--c-muted);
+  --color-faint: var(--c-faint);
+  --color-line: var(--c-line);
+  --color-line-strong: var(--c-line-strong);
+  --color-card: var(--c-card);
+}
+
+/* ---------- palettes ---------- */
+/* Light (default) */
+:root {
+  --c-canvas: #fafaf8;
+  --c-ink: #0a0a0a;
+  --c-muted: #55554f;
+  --c-faint: #77776f;
+  --c-line: rgba(10, 10, 10, 0.12);
+  --c-line-strong: rgba(10, 10, 10, 0.3);
+  --c-card: rgba(10, 10, 10, 0.03);
+  --c-ghost: rgba(10, 10, 10, 0.07);
+  --wave-fill: rgba(10, 10, 10, 0.035);
+  --wave-fill-2: rgba(10, 10, 10, 0.05);
+  --wave-stroke: rgba(10, 10, 10, 0.12);
+  --vignette: rgba(190, 190, 180, 0.35);
+}
+
+/* Dark — the original FHANA Labs palette */
+.dark {
+  --c-canvas: #050505;
+  --c-ink: #f5f5f3;
+  --c-muted: #8a8a86;
+  --c-faint: #5c5c58;
+  --c-line: rgba(245, 245, 243, 0.12);
+  --c-line-strong: rgba(245, 245, 243, 0.28);
+  --c-card: rgba(255, 255, 255, 0.02);
+  --c-ghost: rgba(245, 245, 243, 0.05);
+  --wave-fill: rgba(245, 245, 243, 0.025);
+  --wave-fill-2: rgba(245, 245, 243, 0.035);
+  --wave-stroke: rgba(245, 245, 243, 0.1);
+  --vignette: rgba(5, 5, 5, 0.7);
 }
 
 html {
@@ -17,19 +53,20 @@ html {
 }
 
 body {
-  background: var(--color-canvas);
-  color: var(--color-ink);
+  background: var(--c-canvas);
+  color: var(--c-ink);
   font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 ::selection {
-  background: var(--color-ink);
-  color: var(--color-canvas);
+  background: var(--c-ink);
+  color: var(--c-canvas);
 }
 
 /* ---------- focus states ---------- */
 :focus-visible {
-  outline: 2px solid var(--color-ink);
+  outline: 2px solid var(--c-ink);
   outline-offset: 3px;
   border-radius: 2px;
 }
@@ -105,5 +142,8 @@ body {
   .marquee-track,
   .caret {
     animation: none !important;
+  }
+  body {
+    transition: none;
   }
 }

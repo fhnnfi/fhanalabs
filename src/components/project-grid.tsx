@@ -2,10 +2,44 @@ import { ArrowUpRight } from "lucide-react";
 import { type Project, projectHref } from "@/data/projects";
 
 const statusStyles: Record<NonNullable<Project["status"]>, string> = {
-  live: "text-emerald-400/90 border-emerald-400/30",
-  development: "text-amber-300/90 border-amber-300/30",
+  live: "text-emerald-600 dark:text-emerald-400/90 border-emerald-600/30 dark:border-emerald-400/30",
+  development: "text-amber-600 dark:text-amber-300/90 border-amber-600/30 dark:border-amber-300/30",
   archived: "text-muted border-line",
 };
+
+/**
+ * Big illustrated wordmark of the project name — the card's visual.
+ * Logo tile + oversized name on a subtle tinted band, so every card
+ * reads as a poster even without screenshots.
+ */
+function NameIllustration({ project }: { project: Project }) {
+  return (
+    <div
+      aria-hidden="true"
+      className="relative flex h-28 items-center gap-4 overflow-hidden rounded-xl border border-line bg-gradient-to-br from-white/[0.05] to-transparent px-5 sm:h-32 dark:from-white/[0.04]"
+    >
+      {project.logo ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={project.logo}
+          alt=""
+          width={44}
+          height={44}
+          className="relative z-10 h-11 w-11 shrink-0 rounded-xl"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : null}
+      <span className="relative z-10 truncate text-3xl font-light tracking-tight text-ink sm:text-4xl">
+        {project.name}
+      </span>
+      {/* oversized ghost initial as backdrop */}
+      <span className="absolute -bottom-6 right-1 select-none text-[7rem] font-light leading-none sm:text-[8rem]" style={{ color: "var(--c-ghost)" }}>
+        {project.name.charAt(0)}
+      </span>
+    </div>
+  );
+}
 
 function ProjectCard({ project }: { project: Project }) {
   const href = projectHref(project);
@@ -13,26 +47,24 @@ function ProjectCard({ project }: { project: Project }) {
 
   const inner = (
     <>
-      <div className="flex items-start justify-between gap-4">
-        <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-line bg-white/[0.04] font-mono text-lg text-ink">
-          {project.name.charAt(0)}
-        </div>
+      <NameIllustration project={project} />
+
+      <div className="mt-6 flex items-start justify-between gap-4">
+        <h3 className="text-xl font-medium tracking-tight text-ink sm:text-2xl">
+          {project.name}
+        </h3>
         {href ? (
           <span
-            className={`rounded-full border px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-widest ${statusStyles[status]}`}
+            className={`shrink-0 rounded-full border px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-widest ${statusStyles[status]}`}
           >
             {status}
           </span>
         ) : (
-          <span className="rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-widest text-faint">
+          <span className="shrink-0 rounded-full border border-line px-2.5 py-0.5 font-mono text-[11px] uppercase tracking-widest text-faint">
             soon
           </span>
         )}
       </div>
-
-      <h3 className="mt-6 text-xl font-medium tracking-tight text-ink sm:text-2xl">
-        {project.name}
-      </h3>
       <p className="mt-2 text-sm leading-relaxed text-muted">
         {project.description}
       </p>
@@ -58,7 +90,7 @@ function ProjectCard({ project }: { project: Project }) {
   );
 
   const base =
-    "group block rounded-2xl border border-line bg-white/[0.02] p-6 transition-colors duration-300 hover:border-line-strong hover:bg-white/[0.04] sm:p-8";
+    "group block rounded-2xl border border-line bg-card p-5 transition-colors duration-300 hover:border-line-strong sm:p-6";
 
   if (!href) {
     return (

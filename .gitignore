@@ -41,4 +41,4 @@ yarn-error.log*
 next-env.d.ts
 
 # spec & prototype docs (local only)
-requirement/
+/requirement

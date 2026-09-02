@@ -22,6 +22,7 @@ export const projects: Project[] = [
     description:
       "A creative chat and meme generator — turn any moment into a speech-bubble sticker.",
     url: "", // TODO: replace with deployed URL when available
+    logo: "/logos/bubbls.svg",
     status: "live",
     tags: ["Generator", "Creative"],
   },
@@ -29,7 +30,8 @@ export const projects: Project[] = [
     name: "Ngomongin",
     description:
       "Indonesian Culture Translator — translate text into regional styles like Indonesia Gen Z.",
-    url: "https://ngomongin.fhanalabs.site", // TODO: replace with deployed URL when available
+    url: "https://ngomongin.fhanalabs.site",
+    logo: "/logos/ngomongin.svg",
     status: "live",
     tags: ["AI", "Translator"],
   },

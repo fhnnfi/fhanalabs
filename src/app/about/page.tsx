@@ -34,7 +34,7 @@ export default function AboutPage() {
         </p>
       </div>
 
-      <div className="mt-12 rounded-2xl border border-line bg-white/[0.02] p-6 sm:p-8">
+      <div className="mt-12 rounded-2xl border border-line bg-card p-6 sm:p-8">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-faint">
           What is being built
         </p>

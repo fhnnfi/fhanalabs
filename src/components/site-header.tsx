@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ThemeToggle from "./theme-toggle";
 
 const links = [
   { href: "/#top", label: "Home" },
@@ -20,18 +21,21 @@ export default function SiteHeader() {
         >
           fhana<span className="text-muted">Labs</span>
         </Link>
-        <ul className="flex items-center gap-5 sm:gap-8">
-          {links.map((link) => (
-            <li key={link.label}>
-              <Link
-                href={link.href}
-                className="text-sm text-muted transition-colors hover:text-ink"
-              >
-                {link.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="flex items-center gap-4 sm:gap-6">
+          <ul className="flex items-center gap-5 sm:gap-8">
+            {links.map((link) => (
+              <li key={link.label}>
+                <Link
+                  href={link.href}
+                  className="text-sm text-muted transition-colors hover:text-ink"
+                >
+                  {link.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ThemeToggle />
+        </div>
       </nav>
     </header>
   );
