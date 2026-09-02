@@ -5,6 +5,8 @@ export type Project = {
   description: string;
   url: string;
   logo?: string;
+  /** screenshot / overview image, stored in public/projectoverview/ */
+  image?: string;
   status?: ProjectStatus;
   tags?: string[];
 };
@@ -32,8 +34,19 @@ export const projects: Project[] = [
       "Indonesian Culture Translator — translate text into regional styles like Indonesia Gen Z.",
     url: "https://ngomongin.fhanalabs.site",
     logo: "/logos/ngomongin.svg",
+    image: "/projectoverview/ngomongin.png",
     status: "live",
     tags: ["AI", "Translator"],
+  },
+  {
+    name: "Anggaran Kita",
+    description:
+      "Jelajahi APBD Indonesia melalui peta interaktif — pendapatan, belanja, dan realisasi anggaran daerah dari data publik DJPK.",
+    url: "https://anggarankita.fhanalabs.site",
+    logo: "/logos/anggarankita.svg",
+    image: "/projectoverview/anggarankita.png",
+    status: "live",
+    tags: ["Civic Tech", "Data Viz"],
   },
 ];
 

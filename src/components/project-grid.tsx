@@ -8,15 +8,14 @@ const statusStyles: Record<NonNullable<Project["status"]>, string> = {
 };
 
 /**
- * Big illustrated wordmark of the project name — the card's visual.
- * Logo tile + oversized name on a subtle tinted band, so every card
- * reads as a poster even without screenshots.
+ * Card visual: logo tile, optional project overview screenshot,
+ * and the oversized project name — so every card reads as a poster.
  */
 function NameIllustration({ project }: { project: Project }) {
   return (
     <div
       aria-hidden="true"
-      className="relative flex h-28 items-center gap-4 overflow-hidden rounded-xl border border-line bg-gradient-to-br from-white/[0.05] to-transparent px-5 sm:h-32 dark:from-white/[0.04]"
+      className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl border border-line bg-gradient-to-br from-white/[0.05] to-transparent px-5 pb-8 pt-4 sm:pb-10 dark:from-white/[0.04]"
     >
       {project.logo ? (
         // eslint-disable-next-line @next/next/no-img-element
@@ -25,16 +24,33 @@ function NameIllustration({ project }: { project: Project }) {
           alt=""
           width={44}
           height={44}
-          className="relative z-10 h-11 w-11 shrink-0 rounded-xl"
+          className="relative z-10 h-9 w-9 shrink-0 rounded-lg object-contain"
           loading="lazy"
           decoding="async"
         />
       ) : null}
-      <span className="relative z-10 truncate text-3xl font-light tracking-tight text-ink sm:text-4xl">
+
+      {project.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={project.image}
+          alt=""
+          width={1904}
+          height={941}
+          className="relative z-10 h-14 w-full rounded-md border border-line object-cover object-top shadow-sm sm:h-16"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : null}
+
+      <span className="relative z-10 truncate text-2xl font-light tracking-tight text-ink sm:text-3xl">
         {project.name}
       </span>
       {/* oversized ghost initial as backdrop */}
-      <span className="absolute -bottom-6 right-1 select-none text-[7rem] font-light leading-none sm:text-[8rem]" style={{ color: "var(--c-ghost)" }}>
+      <span
+        className="absolute -bottom-8 right-1 select-none text-[7rem] font-light leading-none sm:text-[8rem]"
+        style={{ color: "var(--c-ghost)" }}
+      >
         {project.name.charAt(0)}
       </span>
     </div>
