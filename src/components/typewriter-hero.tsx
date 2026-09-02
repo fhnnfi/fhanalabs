@@ -138,7 +138,7 @@ export default function TypewriterHero() {
           done ? "opacity-100" : "opacity-0"
         }`}
       >
-        An independent software studio — small products, built with intent.
+        An independent Software Engineer — small products, built with intent.
       </p>
     </div>
   );
