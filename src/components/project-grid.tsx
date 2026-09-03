@@ -96,34 +96,49 @@ function ProjectCard({ project }: { project: Project }) {
         </ul>
       )}
 
-      <span className="mt-6 inline-flex items-center gap-1 text-sm text-ink/80 transition-colors group-hover:text-ink">
-        {href ? "Visit project" : "Deployment link coming soon"}
-        {href ? <ArrowUpRight className="h-4 w-4" aria-hidden="true" /> : null}
-      </span>
+      <div className="mt-6 flex flex-wrap items-center gap-x-6 gap-y-2">
+        {href ? (
+          <a
+            href={href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm text-ink/80 transition-colors hover:text-ink"
+            aria-label={`${project.name} — opens in a new tab`}
+          >
+            Visit project
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+        ) : (
+          <span className="text-sm text-ink/80">
+            Deployment link coming soon
+          </span>
+        )}
+        {project.repo ? (
+          <a
+            href={project.repo}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-ink"
+            aria-label={`${project.name} source code — opens in a new tab`}
+          >
+            Source code
+            <ArrowUpRight className="h-4 w-4" aria-hidden="true" />
+          </a>
+        ) : null}
+      </div>
     </>
   );
 
   const base =
     "group block rounded-2xl border border-line bg-card p-5 transition-colors duration-300 hover:border-line-strong sm:p-6";
 
-  if (!href) {
-    return (
-      <article className={base} aria-label={`${project.name} (coming soon)`}>
-        {inner}
-      </article>
-    );
-  }
-
   return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
+    <article
       className={base}
-      aria-label={`${project.name} — opens in a new tab`}
+      aria-label={href ? project.name : `${project.name} (coming soon)`}
     >
       {inner}
-    </a>
+    </article>
   );
 }
 

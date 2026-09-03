@@ -5,6 +5,8 @@ export type Project = {
   description: string;
   url: string;
   logo?: string;
+  /** public source repository link, shown on the card when set */
+  repo?: string;
   /** screenshot / overview image, stored in public/projectoverview/ */
   image?: string;
   status?: ProjectStatus;
@@ -47,6 +49,23 @@ export const projects: Project[] = [
     image: "/projectoverview/anggarankita.png",
     status: "live",
     tags: ["Civic Tech", "Data Viz"],
+  },
+  {
+    name: "MerchGo Backend",
+    description:
+      "REST API backend untuk aplikasi merchandiser — katalog produk, pesanan, dan manajemen toko.",
+    url: "https://dev-api.fhanafii.my.id/docs/",
+    repo: "https://github.com/Fhanafii/merchgo-backend",
+    status: "development",
+    tags: ["Backend", "API"],
+  },
+  {
+    name: "KabarKode Backend",
+    description:
+      "REST API backend untuk portal berita KabarKode — artikel, kategori, dan manajemen konten.",
+    url: "https://kabarkodeapi.fhanalabs.site/api/docs/",
+    status: "live",
+    tags: ["Backend", "API"],
   },
 ];
 
