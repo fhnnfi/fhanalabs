@@ -30,19 +30,6 @@ function NameIllustration({ project }: { project: Project }) {
         />
       ) : null}
 
-      {project.image ? (
-        // eslint-disable-next-line @next/next/no-img-element
-        <img
-          src={project.image}
-          alt=""
-          width={1904}
-          height={941}
-          className="relative z-10 h-14 w-full rounded-md border border-line object-cover object-top shadow-sm sm:h-16"
-          loading="lazy"
-          decoding="async"
-        />
-      ) : null}
-
       <span className="relative z-10 truncate text-2xl font-light tracking-tight text-ink sm:text-3xl">
         {project.name}
       </span>
@@ -64,7 +51,18 @@ function ProjectCard({ project }: { project: Project }) {
   const inner = (
     <>
       <NameIllustration project={project} />
-
+      {project.image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <img
+          src={project.image}
+          alt={`${project.name} overview`}
+          width={1904}
+          height={941}
+          className="relative z-10 mt-4 aspect-[2/1] w-full rounded-lg border border-line object-cover object-top shadow-sm"
+          loading="lazy"
+          decoding="async"
+        />
+      ) : null}
       <div className="mt-6 flex items-start justify-between gap-4">
         <h3 className="text-xl font-medium tracking-tight text-ink sm:text-2xl">
           {project.name}
