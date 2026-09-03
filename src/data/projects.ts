@@ -35,7 +35,7 @@ export const projects: Project[] = [
     description:
       "Indonesian Culture Translator — translate text into regional styles like Indonesia Gen Z.",
     url: "https://ngomongin.fhanalabs.site",
-    logo: "/logos/ngomongin.svg",
+    logo: "/logos/ngomonginv2.svg",
     image: "/projectoverview/ngomongin.png",
     status: "live",
     tags: ["AI", "Translator"],
