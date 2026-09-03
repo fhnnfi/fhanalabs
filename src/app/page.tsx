@@ -43,7 +43,7 @@ export default function Home() {
             fhana<span className="font-normal">Labs</span>
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-sm leading-relaxed text-muted sm:text-base">
-            Everything we have built so far. Each project is its own small
+            Everything i've built so far. Each project is its own small
             product — follow the link when it goes live.
           </p>
         </div>
