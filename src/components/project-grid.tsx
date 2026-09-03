@@ -8,14 +8,15 @@ const statusStyles: Record<NonNullable<Project["status"]>, string> = {
 };
 
 /**
- * Card visual: logo tile, optional project overview screenshot,
- * and the oversized project name — so every card reads as a poster.
+ * Card header strip: logo tile beside the project name, with a faint
+ * oversized ghost initial as backdrop. The overview screenshot lives
+ * in the card itself, below this band.
  */
 function NameIllustration({ project }: { project: Project }) {
   return (
     <div
       aria-hidden="true"
-      className="relative flex flex-col gap-2.5 overflow-hidden rounded-xl border border-line bg-gradient-to-br from-white/[0.05] to-transparent px-5 pb-8 pt-4 sm:pb-10 dark:from-white/[0.04]"
+      className="relative flex h-16 items-center gap-3 overflow-hidden rounded-xl border border-line bg-gradient-to-br from-white/[0.05] to-transparent px-4 sm:h-20 dark:from-white/[0.04]"
     >
       {project.logo ? (
         // eslint-disable-next-line @next/next/no-img-element
@@ -24,18 +25,17 @@ function NameIllustration({ project }: { project: Project }) {
           alt=""
           width={44}
           height={44}
-          className="relative z-10 h-9 w-9 shrink-0 rounded-lg object-contain"
+          className="relative z-10 h-10 w-10 shrink-0 rounded-lg object-contain sm:h-11 sm:w-11"
           loading="lazy"
           decoding="async"
         />
       ) : null}
-
-      <span className="relative z-10 truncate text-2xl font-light tracking-tight text-ink sm:text-3xl">
+      <span className="relative z-10 truncate text-xl font-light tracking-tight text-ink sm:text-2xl">
         {project.name}
       </span>
       {/* oversized ghost initial as backdrop */}
       <span
-        className="absolute -bottom-8 right-1 select-none text-[7rem] font-light leading-none sm:text-[8rem]"
+        className="absolute -bottom-7 right-1 select-none text-[6rem] font-light leading-none sm:text-[7rem]"
         style={{ color: "var(--c-ghost)" }}
       >
         {project.name.charAt(0)}
