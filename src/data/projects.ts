@@ -56,6 +56,7 @@ export const projects: Project[] = [
       "REST API backend untuk aplikasi merchandiser — katalog produk, pesanan, dan manajemen toko.",
     url: "https://dev-api.fhanafii.my.id/docs/",
     repo: "https://github.com/Fhanafii/merchgo-backend",
+    image: "/projectoverview/merchgo.png",
     status: "development",
     tags: ["Backend", "API"],
   },
@@ -64,6 +65,7 @@ export const projects: Project[] = [
     description:
       "REST API backend untuk portal berita KabarKode — artikel, kategori, dan manajemen konten.",
     url: "https://kabarkodeapi.fhanalabs.site/api/docs/",
+    image: "/projectoverview/kabarkode.png",
     status: "live",
     tags: ["Backend", "API"],
   },
