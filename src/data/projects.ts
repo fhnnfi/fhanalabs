@@ -21,15 +21,15 @@ export type Project = {
  * Do not invent production URLs (see requirement §16 Content Rules).
  */
 export const projects: Project[] = [
-  // {
-  //   name: "Bubbls",
-  //   description:
-  //     "A creative chat and meme generator — turn any moment into a speech-bubble sticker.",
-  //   url: "", // TODO: replace with deployed URL when available
-  //   logo: "/logos/bubbls.svg",
-  //   status: "live",
-  //   tags: ["Generator", "Creative"],
-  // },
+  {
+    name: "Bubbls",
+    description:
+      "A creative chat generator — turn any moment into a speech-bubble sticker.",
+    url: "https://bubbls.fhanalabs.site", // TODO: replace with deployed URL when available
+    logo: "/logos/bubbls.svg",
+    status: "development",
+    tags: ["Generator", "Creative", "chat"],
+  },
   {
     name: "Ngomongin",
     description:
