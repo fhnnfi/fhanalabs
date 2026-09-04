@@ -7,7 +7,16 @@ export default function SiteFooter() {
         <p className="text-sm text-muted">© 2026 FHANA Labs</p>
         <p className="text-sm text-faint">
           Built by{" "}
-          <span className="text-muted">Fahmi Hanafi</span> ·{" "}
+          <a
+            href="https://www.linkedin.com/in/fahmi-hanafi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-animated text-muted hover:text-ink"
+            aria-label="Fahmi Hanafi on LinkedIn — opens in a new tab"
+          >
+            Fahmi Hanafi
+          </a>{" "}
+          ·{" "}
           <Link href="/projects" className="text-muted underline-offset-4 hover:text-ink hover:underline">
             All projects
           </Link>

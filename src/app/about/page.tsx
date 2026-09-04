@@ -18,9 +18,19 @@ export default function AboutPage() {
       <div className="mt-10 space-y-6 text-base leading-relaxed text-muted sm:text-lg">
         <p>
           <span className="text-ink">FHANA Labs</span> is an independent
-          software studio run by Fahmi Hanafi. It is an umbrella brand for
-          small, self-contained digital products — chat toys, translators,
-          generators, and whatever else seems worth building.
+          software studio run by{" "}
+          <a
+            href="https://www.linkedin.com/in/fahmi-hanafi"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="link-animated text-ink"
+            aria-label="Fahmi Hanafi on LinkedIn — opens in a new tab"
+          >
+            Fahmi Hanafi
+          </a>
+          . It is an umbrella brand for small, self-contained digital products
+          — chat toys, translators, civic data tools, and the backends that
+          power them.
         </p>
         <p>
           The philosophy is simple: ship small things often. Every project
@@ -40,18 +50,33 @@ export default function AboutPage() {
         </p>
         <ul className="mt-4 space-y-2 text-base text-muted">
           <li>
-            <span className="text-ink">Bubbls</span> — creative chat &amp; meme
-            generator.
+            <span className="text-ink">Bubbls</span> — creative chat generator.
           </li>
           <li>
             <span className="text-ink">Ngomongin</span> — Indonesian culture
             translator.
           </li>
+          <li>
+            <span className="text-ink">Anggaran Kita</span> — interactive map
+            of Indonesia&apos;s regional budgets (APBD).
+          </li>
+          <li>
+            <span className="text-ink">KabarKode CMS</span> — editorial panel
+            for the KabarKode news portal.
+          </li>
+          <li>
+            <span className="text-ink">MerchGo Backend</span> — REST API for a
+            merchandiser app.
+          </li>
+          <li>
+            <span className="text-ink">KabarKode Backend</span> — REST API for
+            the KabarKode news portal.
+          </li>
         </ul>
         <p className="mt-6 text-sm">
           <Link
             href="/projects"
-            className="text-ink underline-offset-4 hover:underline"
+            className="link-animated text-ink"
           >
             Browse all projects →
           </Link>
