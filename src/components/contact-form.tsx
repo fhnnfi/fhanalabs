@@ -91,10 +91,10 @@ export function WhatsAppDirectLink() {
       href={`https://wa.me/${WHATSAPP_NUMBER}`}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-ink"
-      aria-label="Buka chat WhatsApp — opens in a new tab"
+      className="link-animated inline-flex items-center gap-1 text-sm text-muted transition-colors hover:text-ink"
+      aria-label="Chat langsung via WhatsApp — opens in a new tab"
     >
-      +62 858-9407-9843
+      Chat via WhatsApp
       <ArrowUpRight className="h-3.5 w-3.5" aria-hidden="true" />
     </a>
   );

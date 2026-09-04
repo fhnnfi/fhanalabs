@@ -25,7 +25,7 @@ export default function ContactPage() {
 
       <div className="mt-12 border-t border-line pt-6">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-faint">
-          Atau langsung chat
+          Atau langsung chat disini
         </p>
         <div className="mt-3">
           <WhatsAppDirectLink />
