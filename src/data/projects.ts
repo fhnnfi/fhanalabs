@@ -51,6 +51,16 @@ export const projects: Project[] = [
     tags: ["Civic Tech", "Data Viz"],
   },
   {
+    name: "KabarKode CMS",
+    description:
+      "Panel redaksi untuk portal berita KabarKode — tulis, kelola, dan publikasi artikel serta kategorinya dalam satu tempat.",
+    url: "https://kabarkodecms.fhanalabs.site",
+    logo: "/logos/kabarkode.svg",
+    image: "/projectoverview/kabarkodecms.png",
+    status: "live",
+    tags: ["News", "Editorial", "CMS"],
+  },
+  {
     name: "MerchGo Backend",
     description:
       "REST API backend untuk aplikasi merchandiser — katalog produk, pesanan, dan manajemen toko.",
