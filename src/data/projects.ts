@@ -41,6 +41,16 @@ export const projects: Project[] = [
     tags: ["AI", "Translator"],
   },
   {
+    name: "Kabar Kode",
+    description:
+      "Portal berita teknologi dan developer Indonesia — berita, artikel, dan tips seputar dunia coding.",
+    url: "https://kabarkode.fhanalabs.site",
+    logo: "/logos/kabarkodeblack.svg",
+    image: "/projectoverview/kabarkode.png",
+    status: "live",
+    tags: ["News", "Tech", "Developer"],
+  },
+  {
     name: "Anggaran Kita",
     description:
       "Jelajahi APBD Indonesia melalui peta interaktif — pendapatan, belanja, dan realisasi anggaran daerah dari data publik DJPK.",
@@ -76,7 +86,7 @@ export const projects: Project[] = [
     description:
       "REST API backend untuk portal berita KabarKode — artikel, kategori, dan manajemen konten.",
     url: "https://kabarkodeapi.fhanalabs.site/api/docs/",
-    logo: "/logos/kabarkode.svg",
+    logo: "/logos/kabarkodeblack.svg",
     image: "/projectoverview/kabarkodebackend.png",
     status: "live",
     tags: ["Backend", "API"],
