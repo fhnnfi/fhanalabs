@@ -71,6 +71,17 @@ export const projects: Project[] = [
     tags: ["News", "Editorial", "CMS"],
   },
   {
+    name: "MerchGo",
+    description:
+      "Aplikasi Android untuk merchandiser — absensi, kunjungan toko, dan laporan produk/promo dengan arsitektur offline-first dan sinkronisasi otomatis.",
+    url: "https://merchgo.fhanalabs.site",
+    logo: "/logos/merchgo.svg",
+    repo: "https://github.com/Fhanafii/MerchGo-App",
+    image: "/projectoverview/merchgo.png",
+    status: "development",
+    tags: ["Android", "Kotlin", "Merchandiser"],
+  },
+  {
     name: "MerchGo Backend",
     description:
       "REST API backend untuk aplikasi merchandiser — katalog produk, pesanan, dan manajemen toko.",
