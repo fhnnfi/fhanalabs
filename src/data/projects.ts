@@ -27,6 +27,7 @@ export const projects: Project[] = [
       "A creative chat generator — Buat chat dan percakapan yang bisa kamu kustomisasi untuk meme, konten, dan storytelling.",
     url: "https://bubbls.fhanalabs.site", // TODO: replace with deployed URL when available
     logo: "/logos/bubbls.svg",
+    image: "/projectoverview/bubbls.png",
     status: "development",
     tags: ["Generator", "Creative", "chat"],
   },
