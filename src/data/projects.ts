@@ -83,6 +83,17 @@ export const projects: Project[] = [
     tags: ["Android", "Kotlin", "Merchandiser"],
   },
   {
+    name: "AniScene Backend",
+    description:
+      "REST API backend untuk mencari anime, episode, scene, dan timestamp dari screenshot. Indexing berjalan private/local; hanya Search API yang diekspos melalui Cloudflare Tunnel → Nginx → FastAPI.",
+    url: "https://dev-api.fhanafii.my.id/docs/",
+    logo: "/logos/anisceneback.svg",
+    repo: "https://github.com/Fhanafii/anime-scene-finder",
+    image: "/projectoverview/aniscenebackend.png",
+    status: "development",
+    tags: ["Backend", "API","Machine Learning"],
+  },
+  {
     name: "MerchGo Backend",
     description:
       "REST API backend untuk aplikasi merchandiser — katalog produk, pesanan, dan manajemen toko.",
