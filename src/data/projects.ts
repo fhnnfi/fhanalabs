@@ -86,7 +86,7 @@ export const projects: Project[] = [
     name: "AniScene Backend",
     description:
       "REST API backend untuk mencari anime, episode, scene, dan timestamp dari screenshot. Indexing berjalan private/local; hanya Search API yang diekspos melalui Cloudflare Tunnel → Nginx → FastAPI.",
-    url: "https://dev-api.fhanafii.my.id/docs/",
+    url: "https://anisceneapi.fhanalabs.site",
     logo: "/logos/anisceneback.svg",
     repo: "https://github.com/Fhanafii/anime-scene-finder",
     image: "/projectoverview/aniscenebackend.png",
