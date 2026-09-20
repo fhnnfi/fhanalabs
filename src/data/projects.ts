@@ -32,6 +32,17 @@ export const projects: Project[] = [
     tags: ["Generator", "Creative", "chat"],
   },
   {
+    name: "ESP32-CAM Smart Security System",
+    description:
+      "A smart security system using ESP32-CAM for real-time monitoring and alerting.",
+    url: "https://monitoring.fhanafii.my.id",
+    repo: "https://github.com/Fhanafii/ESP32CAM-SmartSecuritySystem",
+    logo: "/logos/iotmonitoring.svg",
+    image: "/projectoverview/iotmonitoring.png",
+    status: "live",
+    tags: ["AI", "IoT", "Security"],
+  },
+  {
     name: "Ngomongin",
     description:
       "Indonesian Culture Translator — translate text into regional styles like Indonesia Gen Z.",
