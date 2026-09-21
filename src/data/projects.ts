@@ -43,6 +43,17 @@ export const projects: Project[] = [
     tags: ["AI", "IoT", "Security"],
   },
   {
+    name: "AniScene",
+    description:
+      "A platform for discovering and exploring anime scenes with precise timestamping.",
+    url: "https://aniscene.fhanalabs.site/",
+    repo: "https://github.com/Fhanafii/aniscene",
+    logo: "/logos/aniscene.svg",
+    image: "/projectoverview/aniscene.png",
+    status: "live",
+    tags: ["AI", "Anime", "Scene Finder"],
+  },
+  {
     name: "Ngomongin",
     description:
       "Indonesian Culture Translator — translate text into regional styles like Indonesia Gen Z.",
