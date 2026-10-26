@@ -78,6 +78,7 @@ export const projects: Project[] = [
     description:
       "Jelajahi APBD Indonesia melalui peta interaktif — pendapatan, belanja, dan realisasi anggaran daerah dari data publik DJPK.",
     url: "https://anggarankita.fhanalabs.site",
+    repo: "https://github.com/Fhanafii/anggarankita",
     logo: "/logos/anggarankita.svg",
     image: "/projectoverview/anggarankita.png",
     status: "live",
@@ -92,6 +93,16 @@ export const projects: Project[] = [
     image: "/projectoverview/kabarkodecms.png",
     status: "live",
     tags: ["News", "Editorial", "CMS"],
+  },
+  {
+    name: "Cerdikia",
+    description:
+      "Aplikasi kuis edukasi Android untuk anak SD — pembelajaran interaktif dengan gamification, sistem ranking, dan shop untuk meningkatkan keterlibatan dalam belajar.",
+    url: "https://github.com/Cerdikia/CerdikiaMobile",
+    logo: "/logos/cerdikia.svg",
+    image: "/projectoverview/cerdikia.png",
+    status: "development",
+    tags: ["Android", "Kotlin", "Quiz"],
   },
   {
     name: "MerchGo",
