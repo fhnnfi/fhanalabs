@@ -98,7 +98,8 @@ export const projects: Project[] = [
     name: "Cerdikia",
     description:
       "Aplikasi kuis edukasi Android untuk anak SD — pembelajaran interaktif dengan gamification, sistem ranking, dan shop untuk meningkatkan keterlibatan dalam belajar.",
-    url: "https://github.com/Cerdikia/CerdikiaMobile",
+    url: "https://cerdikia.fhanalabs.site",
+    repo: "https://github.com/Cerdikia/CerdikiaMobile",
     logo: "/logos/cerdikia.svg",
     image: "/projectoverview/cerdikia.png",
     status: "development",
