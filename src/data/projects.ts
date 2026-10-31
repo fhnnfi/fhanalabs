@@ -22,14 +22,26 @@ export type Project = {
  */
 export const projects: Project[] = [
   {
-    name: "Bubbls",
+    name: "Cerdikia",
     description:
-      "A creative chat generator — Buat chat dan percakapan yang bisa kamu kustomisasi untuk meme, konten, dan storytelling.",
-    url: "https://bubbls.fhanalabs.site", // TODO: replace with deployed URL when available
-    logo: "/logos/bubbls.svg",
-    image: "/projectoverview/bubbls.png",
+      "Aplikasi kuis edukasi Android untuk anak SD — pembelajaran interaktif dengan gamification, sistem ranking, dan shop untuk meningkatkan keterlibatan dalam belajar.",
+    url: "https://cerdikia.fhanalabs.site",
+    repo: "https://github.com/Cerdikia/CerdikiaMobile",
+    logo: "/logos/cerdikia.svg",
+    image: "/projectoverview/cerdikia.png",
     status: "development",
-    tags: ["Generator", "Creative", "chat"],
+    tags: ["Android", "Kotlin", "Quiz"],
+  },
+  {
+    name: "MerchGo",
+    description:
+      "Aplikasi Android untuk merchandiser — absensi, kunjungan toko, dan laporan produk/promo dengan arsitektur offline-first dan sinkronisasi otomatis.",
+    url: "https://merchgo.fhanalabs.site",
+    logo: "/logos/merchgo.svg",
+    repo: "https://github.com/Fhanafii/MerchGo-App",
+    image: "/projectoverview/merchgo.png",
+    status: "development",
+    tags: ["Android", "Kotlin", "Merchandiser"],
   },
   {
     name: "ESP32-CAM Smart Security System",
@@ -52,6 +64,16 @@ export const projects: Project[] = [
     image: "/projectoverview/aniscene.png",
     status: "live",
     tags: ["AI", "Anime", "Scene Finder"],
+  },
+  {
+    name: "Bubbls",
+    description:
+      "A creative chat generator — Buat chat dan percakapan yang bisa kamu kustomisasi untuk meme, konten, dan storytelling.",
+    url: "https://bubbls.fhanalabs.site", // TODO: replace with deployed URL when available
+    logo: "/logos/bubbls.svg",
+    image: "/projectoverview/bubbls.png",
+    status: "development",
+    tags: ["Generator", "Creative", "chat"],
   },
   {
     name: "Ngomongin",
@@ -93,28 +115,6 @@ export const projects: Project[] = [
     image: "/projectoverview/kabarkodecms.png",
     status: "live",
     tags: ["News", "Editorial", "CMS"],
-  },
-  {
-    name: "Cerdikia",
-    description:
-      "Aplikasi kuis edukasi Android untuk anak SD — pembelajaran interaktif dengan gamification, sistem ranking, dan shop untuk meningkatkan keterlibatan dalam belajar.",
-    url: "https://cerdikia.fhanalabs.site",
-    repo: "https://github.com/Cerdikia/CerdikiaMobile",
-    logo: "/logos/cerdikia.svg",
-    image: "/projectoverview/cerdikia.png",
-    status: "development",
-    tags: ["Android", "Kotlin", "Quiz"],
-  },
-  {
-    name: "MerchGo",
-    description:
-      "Aplikasi Android untuk merchandiser — absensi, kunjungan toko, dan laporan produk/promo dengan arsitektur offline-first dan sinkronisasi otomatis.",
-    url: "https://merchgo.fhanalabs.site",
-    logo: "/logos/merchgo.svg",
-    repo: "https://github.com/Fhanafii/MerchGo-App",
-    image: "/projectoverview/merchgo.png",
-    status: "development",
-    tags: ["Android", "Kotlin", "Merchandiser"],
   },
   {
     name: "AniScene Backend",
