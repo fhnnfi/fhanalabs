@@ -22,13 +22,22 @@ export default function Home() {
         <WaveBackground />
         <div className="relative z-10 w-full">
           <TypewriterHero />
-          <div className="mt-10 flex justify-center">
+          <div className="mt-10 flex flex-wrap justify-center gap-3">
             <Link
               href="#projects"
               className="rounded-full border border-line px-5 py-2 font-mono text-xs uppercase tracking-[0.2em] text-muted transition-colors hover:border-line-strong hover:text-ink"
             >
               See projects ↓
             </Link>
+            <a
+              href="https://www.linkedin.com/in/fahmi-hanafi"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Fahmi Hanafi on LinkedIn — opens in a new tab"
+              className="rounded-full border border-line px-5 py-2 font-mono text-xs uppercase tracking-[0.2em] text-muted transition-colors hover:border-line-strong hover:text-ink"
+            >
+              LinkedIn ↗
+            </a>
           </div>
         </div>
       </section>
